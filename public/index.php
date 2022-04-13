@@ -1,14 +1,15 @@
 <?php
+define('APP_DIR', dirname(__DIR__));
 
-require '../vendor/autoload.php';
-require '../helpers.php';
+require APP_DIR . '/vendor/autoload.php';
+require APP_DIR . '/helpers.php';
 
 $container = \Core\Container::getInstance();
 
-require ("../config/container.php");
+require (APP_DIR . "/config/container.php");
 
 $app = \DI\Bridge\Slim\Bridge::create($container); 
 
-require ("../config/routes.php");
+require (APP_DIR . "/config/routes.php");
 
 $app->run();
