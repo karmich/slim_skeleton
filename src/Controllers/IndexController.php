@@ -8,7 +8,12 @@ use GuzzleHttp\Psr7\Response;
 
 class IndexController
 {
-    public function index(\Pug\Pug $pug)
+    public function index(\Slim\Views\PhpRenderer $renderer)
+    {
+        return $renderer->render(new Response(), APP_DIR . '/src/Views/index.php');
+    }
+
+    public function indexPug(\Pug\Pug $pug)
     {
         return new HTML($pug->render(APP_DIR . '/src/Views/index.pug'));
     }

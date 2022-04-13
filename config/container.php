@@ -13,3 +13,7 @@ $container->set(\Pug\Pug::class, function($c){
         'cache' => $c->get('APP_DIR') . '/cache/pug'
     ]);
 });
+
+$container->set(\Slim\Views\PhpRenderer::class, function($c){
+    return new \Slim\Views\PhpRenderer();
+});

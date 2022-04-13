@@ -12,7 +12,7 @@ class HTML extends Response
             $status,
             array_merge(
                 [
-                    'Content-type' => 'application/html',
+                    'Content-type' => 'text/html',
                 ],
                 $headers
             ),
