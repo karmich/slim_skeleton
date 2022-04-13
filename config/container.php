@@ -3,6 +3,7 @@
 /**
  * $container: Instance of the application's container
  */
+/** @var \DI\Container $container */
 
 $container->set('APP_DIR', APP_DIR);
 $container->set('APP_NAME', "SlimSkeleton");
