@@ -10,7 +10,7 @@ class IndexController
 {
     public function index(\Slim\Views\PhpRenderer $renderer)
     {
-        return $renderer->render(new Response(), APP_DIR . '/src/Views/index.php');
+        return $renderer->render(new HTML(), APP_DIR . '/src/Views/index.php');
     }
 
     public function indexPug(\Pug\Pug $pug)
@@ -20,7 +20,7 @@ class IndexController
     
     public function getById($id)
     {
-        return new Response(200, [], 'Hello, ' . $id);
+        return new HTML('Hello, ' . $id);
     }
 
     public function json()
