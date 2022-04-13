@@ -10,6 +10,7 @@ require (APP_DIR . "/config/container.php");
 
 $app = \DI\Bridge\Slim\Bridge::create($container); 
 
-require (APP_DIR . "/config/routes.php");
+require (APP_DIR . "/config/api_routes.php");
+require (APP_DIR . "/config/web_routes.php");
 
 $app->run();
